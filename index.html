@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Lab Exam Website</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <img src="/assests/left-design.png" class="left-d" />
+        <img src="/assests/right-design.png" class="right-d" />
+        <div class="header-overlay"></div>
+
+        <div class="logo-container">
+          <img src="./assests/logo2.png" class="logo" alt="Logo" />
+        </div>
+
+        <!-- Menu toggle button -->
+        <div class="menu-toggle" id="menu-toggle">
+          <img src="./assests/menu-btn.png" alt="" />
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./pages/about.html">About Me</a></li>
+            <li><a href="./pages/blog.html">Blog Posts</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <img
+          class="profile-photo"
+          src="/assests/Profile2.jpg"
+          alt="profile-photo"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Welcome to my blog — enjoy your stay!</h2>
+        <p>Sharing my journey through code, creativity, and personal growth.</p>
+        <a class="btn" href="./pages/blog.html">Explore My Blog</a>
+      </section>
+
+      <section class="about-preview">
+        <div>
+          <img src="/assests/Profile2.jpg" alt="Cyrus" class="profile-photo" />
+        </div>
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I'm Cyrus Manguerra, a Web Developer in the making. Ilove learning,
+            writing and creating digital things that help others.
+          </p>
+          <a href="./pages/about.html" class="btn">Learn More</a>
+        </div>
+      </section>
+
+      <section class="blog-grid">
+        <h2>Latest Posts</h2>
+        <div class="blog-container">
+          <article class="blog-card">
+            <img src="/assests/posts/post2.png" alt="Post2" />
+            <h3>Top 5 Tools for Productivity</h3>
+            <p class="date">July 25, 2025</p>
+            <p>
+              These tools elped me stay focused and organized while working on
+              projects.
+            </p>
+            <a href="/pages/blog.html">Read More</a>
+          </article>
+          <article class="blog-card">
+            <img src="/assests/posts/post3.png" alt="Post 3" />
+            <h3>My Favorite Places to Read</h3>
+            <p class="date">July 18, 2025</p>
+            <p>
+              From cafes to parks, here are the cozy places where I love to read
+              and reflect.
+            </p>
+            <a href="/pages/blog.html">Read More</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta">
+        <h2>Let's Connect!</h2>
+        <p>Have feedback, ideas, or questions? I'd love to hear from you.</p>
+        <br />
+        <a href="/pages/contact.html" class="btn">Contact Me</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://github.com/cyrushie" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a
+          href="https://www.linkedin.com/in/cyrus-manguerra-890532312/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
+        >
+        <a href="https://www.facebook.com/cyrus.manguerra.905/" target="_blank"
+          ><i class="fab fa-facebook"></i> Facebook</a
+        >
+      </div>
+      <p>&copy; 2025 Cyrus The Greatest | All rights reserved</p>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

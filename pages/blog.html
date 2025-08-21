@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.8/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Blog Post</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <img src="/assests/left-design.png" class="left-d" />
+        <img src="/assests/right-design.png" class="right-d" />
+        <div class="header-overlay"></div>
+
+        <div class="logo-container">
+          <img src="/assests/logo2.png" class="logo" alt="Logo" />
+        </div>
+
+        <!-- Menu toggle button -->
+        <div class="menu-toggle" id="menu-toggle">
+          <img src="/assests/menu-btn.png" alt="" />
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/about.html">About Me</a></li>
+            <li><a href="/pages/blog.html">Blog Posts</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <img
+          class="profile-photo"
+          src="/assests/Profile2.jpg"
+          alt="profile-photo"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section class="blog-grid">
+        <h2>My Blog Posts</h2>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search blog posts..."
+          />
+          <span class="search-icon"></span>
+        </div>
+        <div class="blog-container">
+          <article class="blog-card">
+            <img src="/assests/posts/post1.2.png" alt="Post 1" />
+            <h3>Starting My Coding Journey</h3>
+            <p class="date">June 14, 2020</p>
+            <p>
+              I started programming at 14 with simple tutorials and small
+              projects. It was challenging at first, but as I explored more
+              languages, my curiosity grew into a passion that still drives me
+              to keep learning today.
+            </p>
+            <a href="#">Read More</a>
+          </article>
+          <article class="blog-card">
+            <img src="/assests/posts/post2.png" alt="Post 2" />
+            <h3>Top 5 Tools for Productivity</h3>
+            <p class="date">July 25, 2025</p>
+            <p>
+              These tools helped me stay focused and organized while working on
+              projects remotely.
+            </p>
+            <a href="#">Read More</a>
+          </article>
+
+          <article class="blog-card">
+            <img src="/assests/posts/post3.png" alt="Post 3" />
+            <h3>My Favorite Places to Read</h3>
+            <p class="date">July 18, 2025</p>
+            <p>
+              From cozy cafes to quiet parks, here are the places where I love
+              to read and reflect.
+            </p>
+            <a href="#">Read More</a>
+          </article>
+          <article class="blog-card">
+            <img src="/assests/posts/post4.png" alt="Post 4" />
+            <h3>One of my Hobby</h3>
+            <p class="date">June 20, 2025</p>
+            <p>
+              Playing chess is one of my favorite hobbies. I enjoy the challenge
+              of planning ahead and testing my focus while having fun competing
+              with friends.
+            </p>
+            <a href="#">Read More</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Cyrus The Greatest | All rights reserved.</p>
+    </footer>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const blogCards = document.querySelectorAll(".blog-card");
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector("nav ul");
+
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        blogCards.forEach((card) => {
+          const title = card.querySelector("h3").textContent.toLowerCase();
+          const desc = card.querySelector("p").textContent.toLowerCase();
+
+          if (title.includes(query) || desc.includes(query)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

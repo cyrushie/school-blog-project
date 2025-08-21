@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <img src="/assests/left-design.png" class="left-d" />
+        <img src="/assests/right-design.png" class="right-d" />
+        <div class="header-overlay"></div>
+
+        <div class="logo-container">
+          <img src="/assests/logo2.png" class="logo" alt="Logo" />
+        </div>
+
+        <!-- Menu toggle button -->
+        <div class="menu-toggle" id="menu-toggle">
+          <img src="/assests/menu-btn.png" alt="" />
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/pages/about.html">About Me</a></li>
+            <li><a href="/pages/blog.html">Blog Posts</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <img
+          class="profile-photo"
+          src="/assests/Profile2.jpg"
+          alt="profile-photo"
+        />
+      </div>
+    </header>
+
+    <main class="about-main">
+      <h2>About Me</h2>
+      <section class="intro">
+        <div class="about-image">
+          <img
+            src="/assests/Profile2.jpg"
+            alt="Cyrus Manguerra"
+            class="profile-photo"
+          />
+        </div>
+        <div class="about-content">
+          <p>
+            Hello! I'm <strong>Cyrus Manguerra</strong>, a web developer and
+            curious learner.
+          </p>
+          <p>
+            I started this blog to share my experiences in coding, technology,
+            books, and personal growth. It’s a place where I can reflect on what
+            I learn and hopefully inspire others on a similar path.
+          </p>
+          <p>
+            Outside of coding, I enjoy playing basketball, challenging myself
+            with mobile games, and relaxing with a good movie.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="about-footer">
+      <p>&copy; 2025 Cyrus The Great | All rights reserved.</p>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
